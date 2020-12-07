@@ -1,13 +1,16 @@
 function logIn(username,password){
     let xhttp = new XMLHttpRequest();
+    alert("login has been called")
     xhttp.onreadystatechange = function(){
+        alert("test");
+
         if(this.readyState == 4 && this.status == 200){
-            alert("test");
             // login here
             let response = this.responseText;
             alert(response);
-            if(response === "success")
+            if(response === "success"){
                 location.reload();
+            }
             else{
                 let data = "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>  <strong>Error!</strong> Your username/password combination did not match any records!</div>";
                 $("#loginFormMessage").html(data);
@@ -39,7 +42,7 @@ $(document).ready(function () {
         } else $("#loginPasswordMsg").html("");
 
         if (errors) return;
-
+        alert(`username: ${username}\npassword:${password}`);
         logIn(username,password);
 
 
