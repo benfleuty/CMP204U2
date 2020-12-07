@@ -2,18 +2,6 @@
 require_once "config.php";
 session_start();
 
-function errorOut()
-{
-    echo "fail";
-    die();
-}
-
-function errorOutWithMessage($message)
-{
-    echo $message;
-    die();
-}
-
 if (!isset($_POST["login"]) or !($_POST["login"])) errorOut();
 $username = $db->real_escape_string($_POST["username"]);
 $password = $db->real_escape_string($_POST["password"]);

@@ -12,6 +12,18 @@ function loggedIn()
   else return false;
 }
 
+function errorOut()
+{
+    echo "fail";
+    die();
+}
+
+function errorOutWithMessage($message)
+{
+    echo $message;
+    die();
+}
+
 $MAX_COMMENTS = 50;
 
 require_once "db.php";
