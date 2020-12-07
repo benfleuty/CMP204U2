@@ -57,32 +57,6 @@ $(document).ready(function () {
             $("#registerPasswordConfirmMsg").html(data);
         }
         if (errors) return;
-
-
         register(username, password);
-
-        // $.ajax({
-        //     url: "register.php",
-        //     method: "POST",
-        //     data: {
-        //         register:true,
-        //         username: username,
-        //         fname: fname,
-        //         lname: lname,
-        //         password: password
-        //     },
-        //     success: function (data) {
-        //         if (data === "success")
-        //             location.reload();
-        //         else if (data === "username taken") {
-        //             let data = "<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button><span class=\"sr-only\" > Close</span ><strong>Username taken!</strong> Please choose a different username!</div>";
-        //             $("#registerFormMessage").html(data);
-        //         } else {
-        //             let data = "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button><span class=\"sr-only\" > Close</span ><strong>Sorry!</strong> Something's gone wrong.<br/>Your password couldn't be updated. Please try again.</div>";
-        //             $('.msg').html(data);
-        //         }
-        //     }
-        // });
-
     });
 })
