@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 (isset($_SESSION["lastPage"]) && !empty($_SESSION["lastPage"])) ? $lastPage = $_SESSION["lastPage"] : $lastPage = "index.php";
 session_destroy();
