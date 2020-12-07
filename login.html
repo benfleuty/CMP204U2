@@ -1,0 +1,30 @@
+<script src="js/login.js"></script>
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!--Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"> Login</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <span id="loginFormMessage"></span>
+        <form>
+          <div class="form-row">
+            <label class="font-weight-bold"> Username</label>
+            <input type="text" id="loginUsername" class="form-control"/>
+            <span id="loginUsernameMsg"></span>
+          </div>
+          <div class="form-row">
+            <label class="font-weight-bold"> Password</label>
+            <input type="password" id="loginPassword" class="form-control"/>
+            <span id="loginPasswordMsg"></span>
+          </div>
+          <div class="form-row">
+            <button id="logniButton" class="btn btn-primary btn-block"> Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

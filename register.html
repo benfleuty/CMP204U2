@@ -1,0 +1,45 @@
+<script src="js/register.js"></script>
+<div id="registerModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!--Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"> Sign up </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <span id="registerFormMessage"></span>
+          <div class="form-row">
+            <label><strong>Username:</strong></label>
+            <input type="text" class="form-control" name="registerUsername" id="registerUsername" placeholder="Username" required>
+            <span id="registerUsernameMsg"></span>
+          </div>
+          <div class="form-row">
+            <label> Forename:</label>
+            <input type="text" class="form-control" name="registerFname" id="registerFname" placeholder="Forename (optional)">
+            <span id="registerFnameMsg"></span>
+          </div>
+          <div class="form-row">
+            <label> Surname:</label>
+            <input type="text" class="form-control" name="registerLname" id="registerLname" placeholder="Surname (optional)">
+            <span id="registerLnameMsg"></span>
+          </div>
+          <div class="form-row">
+            <label><strong> Password:</strong></label>
+            <input type="password" class="form-control" name="registerPassword" id="registerPassword" placeholder="Password" required>
+            <span id="registerPasswordMsg"></span>
+          </div>
+          <div class="form-row">
+            <label><strong> Confirm Password:</strong></label>
+            <input type="password" class="form-control" name="registerPasswordConfirm" id="registerPasswordConfirm" placeholder="Confirm Password" required>
+            <span id="registerPasswordConfirmMsg"></span>
+          </div>
+          <div class="form-row">
+            <button id="registerButton" class="btn btn-primary btn-block my-2">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
