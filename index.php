@@ -38,24 +38,7 @@ $currentPage = "index.php";
                 adipisicing tempor cupidatat occaecat mollit excepteur. </p>
         </div>
         <div class="col-md-4">
-            <div class="comments">
-                <div class="comment-outer">
-                    <div class="comment-body">
-                        <p>Veniam tempor quis sit magna commodo. Aliquip Lorem ut labore voluptate nostrud officia
-                            excepteur!</p>
-                    </div>
-                    <hr class="comment-hr">
-                    <div class="comment-footer">
-                        <div class="comment-user-details">
-                            <p>username date time</p>
-                        </div>
-                        <div class="comment-user-controls">
-                            <i class="fa fa-edit"></i>
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php $commentTarget = "band"; include "comments.php"?>
         </div>
     </div>
 </main> <?php include_once "footer.php" ?> </body>
