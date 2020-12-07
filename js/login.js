@@ -40,27 +40,5 @@ $(document).ready(function () {
 
         if (errors) return;
         logIn(username, password);
-
-
-        /*
-        old function
-        replace me with vanilla ajax
-        $.ajax({
-            url: "login.php",
-            method: "POST",
-            data: {
-                login: true,
-                username: username,
-                password: password
-            },
-            success: function (data) {
-                if (data === "success")
-                    location.reload();
-                else {
-                    var data = "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>  <strong>Error!</strong> Your username/password combination did not match any records!</div>";
-                    $("#loginFormMessage").html(data);
-                }
-            }
-        }); */
     });
 })
