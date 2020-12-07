@@ -4,8 +4,14 @@ session_start();
 
 function errorOut()
 {
-  echo "fail";
-  die();
+    echo "fail";
+    die();
+}
+
+function errorOutWithMessage($message)
+{
+    echo $message;
+    die();
 }
 
 if (!isset($_POST["login"]) or !($_POST["login"])) errorOut();
@@ -20,7 +26,7 @@ $stmt->bind_param("s", $username);
 $stmt->execute();
 $result = $stmt->get_result(); // get the query result
 if (mysqli_num_rows($result) <= 0) errorOut();
-$data = $result->fetch_array();
+$data = $result->fetch_assoc();
 if (!password_verify($password, $data["password"])) errorOut();
 $_SESSION["username"] = $username;
 echo "success";

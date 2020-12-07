@@ -1,27 +1,24 @@
-function logIn(username,password){
+function logIn(username, password) {
     let xhttp = new XMLHttpRequest();
-    alert("login has been called")
-    xhttp.onreadystatechange = function(){
-        alert("test");
-
-        if(this.readyState == 4 && this.status == 200){
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
             // login here
             let response = this.responseText;
-            alert(response);
-            if(response === "success"){
+            if (response === "success")
                 location.reload();
-            }
-            else{
+
+            else {
                 let data = "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>  <strong>Error!</strong> Your username/password combination did not match any records!</div>";
                 $("#loginFormMessage").html(data);
             }
         }
-
-        xhttp.open("POST","login.php",true);
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send(`username=${username}&password=${password}`);
     }
+
+    xhttp.open("POST", "login.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(`username=${username}&password=${password}&login=true`);
 }
+
 
 $(document).ready(function () {
     $("#loginButton").click(function (e) {
@@ -42,12 +39,10 @@ $(document).ready(function () {
         } else $("#loginPasswordMsg").html("");
 
         if (errors) return;
-        alert(`username: ${username}\npassword:${password}`);
-        logIn(username,password);
+        logIn(username, password);
 
 
-
-        /* 
+        /*
         old function
         replace me with vanilla ajax
         $.ajax({
