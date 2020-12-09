@@ -18,9 +18,10 @@ function errorOut()
     die();
 }
 
-function errorOutWithMessage($message)
+function errorOutWithMessage($message,$encode = false)
 {
-    echo $message;
+    if($encode) echo json_encode($message);
+    else echo $message;
     die();
 }
 

@@ -38,7 +38,7 @@ $currentPage = "index.php";
                 adipisicing tempor cupidatat occaecat mollit excepteur. </p>
         </div>
         <div class="col-md-4">
-            <?php $commentTarget = "band"; include "comments.php"?>
+            <?php $_SESSION["commentTarget"] = "band"; include "comments.php"?>
         </div>
     </div>
 </main> <?php include_once "footer.php" ?> </body>
