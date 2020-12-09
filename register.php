@@ -1,4 +1,11 @@
 <?php
+/**
+ *
+ * @var $db
+ *
+ */
+
+
 session_start();
 require_once "config.php";
 
@@ -8,7 +15,7 @@ $fname = $db->real_escape_string($_POST["fname"]);
 $lname = $db->real_escape_string($_POST["lname"]);
 $password = $db->real_escape_string($_POST["password"]);
 
-$sql = "SELECT * FROM CMP204users WHERE username = ?";
+$sql = "SELECT * FROM CMP204users WHERE username = '?'";
 $stmt = $db->stmt_init();
 if (!$stmt = $db->prepare($sql)) errorOut();
 

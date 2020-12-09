@@ -1,7 +1,7 @@
 function register(username, password) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             // register here
             let response = this.responseText;
             alert(`response:${response}`);
@@ -10,7 +10,7 @@ function register(username, password) {
                 location.reload();
             } else if (response === "username taken") {
                 let data = `<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button>  <strong>Error!</strong> Your username has already been taken!</div>`;
-                $("#registerUsernameMsg").html
+                $("#registerUsernameMsg").html(data);
             } else {
                 let data = `<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button>  <strong>Error!</strong> Your username/password combination did not match any records!</div>`;
                 $("#loginFormMessage").html(data);
@@ -46,7 +46,7 @@ $(document).ready(function () {
             else $("#registerPasswordConfirmMsg").html("");
             errors = true;
         }
-        if (password != passwordConfirm) {
+        if (password !== passwordConfirm) {
             data = "<div class=\"alert alert-danger alert-dismissible fade show m-1\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button><span class=\"sr-only\" > Close</span ><strong>Error:</strong> Passwords do not match.</div>";
             $("#registerPasswordMsg").html(data);
             $("#registerPasswordConfirmMsg").html(data);
