@@ -55,13 +55,29 @@
 
 .comment-user-details {
     text-align: left;
-    float: left;
 }
 
 .comment-user-controls {
     text-align: right;
 }
 
-.no-comments-message > div, .comment-not-logged-in-message > div {
+.comment-user-controls > i{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.fa-edit:hover{
+    color:blue;
+}
+
+.fa-trash:hover{
+    color:red;
+}
+
+#noCommentsMessage > div, #commentNotLoggedInMessage > div {
     text-align: center;
+}
+
+#comments-output{
+    margin-top: 5px;
 }

@@ -5,7 +5,7 @@ session_start();
 // debug start
 echo "&nbsp;&nbsp;debug: ";
 if(isset($_SESSION["username"]))
-echo $_SESSION["username"];
+echo $_SESSION["username"] . " id:" . $_SESSION["id"];
 else echo "guest";
 //debug end
 ?>

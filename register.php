@@ -15,7 +15,7 @@ $fname = $db->real_escape_string($_POST["fname"]);
 $lname = $db->real_escape_string($_POST["lname"]);
 $password = $db->real_escape_string($_POST["password"]);
 
-$sql = "SELECT * FROM CMP204users WHERE username = '?'";
+$sql = "SELECT * FROM CMP204users WHERE username = ?";
 $stmt = $db->stmt_init();
 if (!$stmt = $db->prepare($sql)) errorOut();
 
@@ -36,6 +36,17 @@ if (!$stmt = $db->prepare($sql)) errorOut();
 $stmt->bind_param("ss", $username, $password);
 
 if ($stmt->execute()) {
+    $stmt = $db->stmt_init();
+    $sql = "SELECT * FROM CMP204users WHERE username = ? AND password = ?";
+    if(!$stmt = $db->prepare($sql)) errorOut();
+
+    $stmt->bind_param("ss", $username,$password);
+    $stmt->execute();
+    $result = $stmt->get_result(); // get the query result
+    if (mysqli_num_rows($result) != 1) errorOut();
+    $data = $result->fetch_assoc();
+
+    $_SESSION["id"] = $data["id"];
     $_SESSION["username"] = $username;
     echo "success";
     exit();

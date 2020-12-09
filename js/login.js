@@ -8,6 +8,7 @@ function logIn(username, password) {
                 location.reload();
 
             else {
+                alert(response);
                 let data = "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>  <strong>Error!</strong> Your username/password combination did not match any records!</div>";
                 $("#loginFormMessage").html(data);
             }
