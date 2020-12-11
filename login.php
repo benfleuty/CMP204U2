@@ -11,6 +11,9 @@ session_start();
 if (!isset($_POST["login"]) or !($_POST["login"])) errorOut();
 $username = $db->real_escape_string($_POST["username"]);
 $password = $db->real_escape_string($_POST["password"]);
+// salt
+// password + drowssap + username + emanresu
+$password .= strrev($password) . $username . strrev($username);
 
 $stmt = $db->stmt_init();
 $sql = "SELECT * FROM CMP204users WHERE username = ?";
