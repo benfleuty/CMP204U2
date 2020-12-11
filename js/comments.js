@@ -56,6 +56,7 @@ $(document).ready(function () {
                     let username = data[1];
                     let id = data[2];
                     let datetime = data[3];
+                    text = data[4];
                     // add user's comment to top of comments
                     let Comment = new comment(text, username, id, datetime);
                     let commentsOutput = $("#comments-output");
@@ -123,6 +124,7 @@ $(document).ready(function () {
                 if (data[0] === "success") {
                     let username = data[1];
                     let datetime = data[2];
+                    textToEnter = data[3]
                     let Comment = new comment(textToEnter, username, commentID, datetime);
 
                     let search = "#commentId-"+commentID;
