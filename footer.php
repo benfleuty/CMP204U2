@@ -10,16 +10,16 @@
                 <h5 class="text-uppercase">Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Link 1</a>
+                        <a href="#">Link 1</a>
                     </li>
                     <li>
-                        <a href="#!">Link 2</a>
+                        <a href="#">Link 2</a>
                     </li>
                     <li>
-                        <a href="#!">Link 3</a>
+                        <a href="#">Link 3</a>
                     </li>
                     <li>
-                        <a href="#!">Link 4</a>
+                        <a href="#">Link 4</a>
                     </li>
                 </ul>
             </div>
@@ -27,21 +27,20 @@
                 <h5 class="text-uppercase">Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Link 1</a>
+                        <a href="#">Link 1</a>
                     </li>
                     <li>
-                        <a href="#!">Link 2</a>
+                        <a href="#">Link 2</a>
                     </li>
                     <li>
-                        <a href="#!">Link 3</a>
+                        <a href="#">Link 3</a>
                     </li>
                     <li>
-                        <a href="#!">Link 4</a>
+                        <a href="#">Link 4</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="footer-copyright text-center py-3">© 2020 Copyright: Ben Fleuty
-    </div>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright: Ben Fleuty</div>
 </footer>
