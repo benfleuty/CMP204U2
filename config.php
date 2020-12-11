@@ -25,6 +25,4 @@ function errorOutWithMessage($message,$encode = false)
     die();
 }
 
-$MAX_COMMENTS = 50;
-
 require_once "db.php";
