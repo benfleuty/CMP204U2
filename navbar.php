@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var $currentPage // stores the current page being viewed
+ */
 require_once "config.php";
 session_start();
 
