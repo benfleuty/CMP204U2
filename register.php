@@ -11,8 +11,7 @@ require_once "config.php";
 
 if (!isset($_POST["register"]) or !($_POST["register"])) errorOut();
 $username = $db->real_escape_string($_POST["username"]);
-$fname = $db->real_escape_string($_POST["fname"]);
-$lname = $db->real_escape_string($_POST["lname"]);
+$username = htmlspecialchars($username);
 $password = $db->real_escape_string($_POST["password"]);
 
 $sql = "SELECT * FROM CMP204users WHERE username = ?";
