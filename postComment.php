@@ -12,11 +12,6 @@ include "config.php";
 if (!loggedIn()) return;
 
 $comment = $_POST["comment"];
-
-$o = "Comment: " . $comment;
-$o .= "\nTarget: " . $_SESSION["commentTarget"];
-
-
 $stmt = $db->stmt_init();
 $sql = "INSERT INTO CMP204comments (content,userId,target) VALUES (?," . $_SESSION["id"] . ",?)";
 
