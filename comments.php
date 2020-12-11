@@ -59,7 +59,7 @@ foreach ($result as $row) {
         "<p>{$row["username"]} {$row["date"]}";
 
     if ($_SESSION["username"] == $row["username"])
-        $output .= '<span class="comment-user-controls"><i class="fa fa-edit"></i><i id="'.$row["id"].'" class="fa fa-trash delete-comment" aria-hidden="true"></i></span>';
+        $output .= '<span class="comment-user-controls"><i id="edit-' . $row["id"] .'"  class="fa fa-edit"></i><i id="delete-'.$row["id"].'" class="fa fa-trash delete-comment" aria-hidden="true"></i></span>';
 
     $output .= "</p></div></div></div>";
 }
