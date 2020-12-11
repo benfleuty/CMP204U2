@@ -33,5 +33,5 @@ if (!$stmt = $db->prepare($sql)) errorOutWithMessage("PostComment could not prep
 $stmt->execute();
 $result = $stmt->get_result();
 $result = $result->fetch_assoc();
-echo json_encode(array("success", $_SESSION["username"], $result["id"], $result["date"]));
+echo json_encode(array("success", $_SESSION["username"], $result["id"], $result["date"],$comment));
 return;
