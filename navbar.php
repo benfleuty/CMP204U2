@@ -31,8 +31,8 @@ session_start();
                     <div class="dropdown-header">Account</div>
                     <?php if (!loggedIn()) {
                     ?>
-                        <a type="button" class="dropdown-item" name="login" id="login" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in"></i> Sign In </a>
-                        <a type="button" class="dropdown-item" name="register" id="register" data-toggle="modal" data-target="#registerModal"><i class="fa fa-user-plus"></i> Sign Up </a>
+                        <a type="button" class="dropdown-item" id="login" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in"></i> Sign In </a>
+                        <a type="button" class="dropdown-item" id="register" data-toggle="modal" data-target="#registerModal"><i class="fa fa-user-plus"></i> Sign Up </a>
                     <?php
                     } else {
                     ?>
