@@ -46,14 +46,12 @@ $(document).ready(function () {
     $("#postCommentButton").click(function () {
         let text = $("#commentText").val();
         if (text === "") return;
-        console.info(`#commentText.val() = ${text}`);
         $.ajax({
             url: "postComment.php",
             method: "POST",
             data: {comment: text},
             dataType: "json",
             success: function (data) {
-                console.info(`response: ${data}`);
                 if (data[0] === "success") {
                     let username = data[1];
                     let id = data[2];
@@ -89,11 +87,8 @@ $(document).ready(function () {
             success: function (data) {
                 $("#confirm-delete").modal("hide");
                 if (data === "success") {
-                    console.info(`trying to delete #commentId-${commentID}`);
                     let search = `#commentId-${commentID}`;
-                    console.info(`search = ${search}`);
                     $(search).fadeOut(300, function () {
-                        console.info(`$(search).remove();`)
                         $(search).remove();
                     })
                 }
@@ -119,8 +114,6 @@ $(document).ready(function () {
 
     $(document).on("click","#postCommentEditButton",function (){
         let textToEnter = $("#commentTextEditor").val();
-        console.info(`text to enter: ${textToEnter} - ${typeof (textToEnter)}`);
-        console.info(`commentID: ${commentID}`);
         $.ajax({
             url: "editComment.php",
             method: "POST",
