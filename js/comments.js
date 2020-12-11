@@ -7,11 +7,26 @@ class comment {
     }
 
     create() {
-        let output = `<div class="comment-outer"><div class="comment-body"><p>`;
-        output = `${output}${this.text}`;
-        output = `${output}</p></div><hr class="comment-hr"><div class="comment-footer"><div class="comment-user-details"><p>`;
-        output = `${output}${this.username} ${this.datetime}`;
-        output = `${output}</p></div><div class="comment-user-controls"><i class="fa fa-edit"></i><i id="${this.id}" class="fa fa-trash delete-comment" aria-hidden="true"></i></div></div></div>`;
+        let output = `<div id="commentId-${this.id}" class="comment-outer">`;
+        output = `${output}<div class="comment-body"><p>${this.text}</p></div>`;
+        output = `${output}<hr class="comment-hr"><div class="comment-footer">`;
+        output = `${output}<div class="comment-user-details"><p>${this.username} ${this.datetime}`;
+        output = `${output}<span class="comment-user-controls"><i class="fa fa-edit"></i><i id="${this.id}" class="fa fa-trash delete-comment" aria-hidden="true"></i></span></div></div></div>`;
+        //         $output .= '<span class="comment-user-controls"><i class="fa fa-edit"></i><i id="'.$row["id"].'" class="fa fa-trash delete-comment" aria-hidden="true"></i></span>';
+
+        // "<p>{$row["content"]}</p>".
+        // '</div>
+        // <hr class="comment-hr">
+        //     <div class="comment-footer">
+        //     <div class="comment-user-details">'.
+        // "<p>{$row["username"]} {$row["date"]}";
+        //
+        // if ($_SESSION["username"] == $row["username"])
+        //     $output .= '<span class="comment-user-controls"><i class="fa fa-edit"></i><i id="'.$row["id"].'" class="fa fa-trash delete-comment" aria-hidden="true"></i></span>';
+        //
+        // $output .= "</p></div></div></div>";
+
+
         return output;
     }
 
@@ -60,11 +75,11 @@ $(document).ready(function () {
                     let datetime = data[3];
                     // add user's comment to top of comments
                     let Comment = new comment(text, username, id, datetime);
-                    let current = $("#comments-output").html();
-
+                    let commentsOutput = $("#comments-output");
+                    let current = commentsOutput.html();
                     let newCommentsHTML = `${Comment.create()}${current}`;
 
-                    $("#comments-output").html(newCommentsHTML);
+                    commentsOutput.html(newCommentsHTML);
                     $("#noCommentsMessage").remove();
                     $("#commentText").innerText = "";
                     return;
@@ -83,7 +98,6 @@ $(document).ready(function () {
 
     $(document).on("click", ".delete-comment", function () {
         commentID = this.id;
-        $(this).remove();
         $("#confirm-delete").modal();
     });
 
