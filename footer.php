@@ -10,16 +10,16 @@
                 <h5 class="text-uppercase">Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#">Link 1</a>
+                        <a href="privacy.php">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="#">Link 2</a>
+                        <a href="privacy.php">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="#">Link 3</a>
+                        <a href="privacy.php">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="#">Link 4</a>
+                        <a href="privacy.php">Privacy Policy</a>
                     </li>
                 </ul>
             </div>
@@ -27,16 +27,16 @@
                 <h5 class="text-uppercase">Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#">Link 1</a>
+                        <a href="privacy.php">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="#">Link 2</a>
+                        <a href="privacy.php">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="#">Link 3</a>
+                        <a href="privacy.php">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="#">Link 4</a>
+                        <a href="privacy.php">Privacy Policy</a>
                     </li>
                 </ul>
             </div>
