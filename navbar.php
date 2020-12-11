@@ -36,7 +36,7 @@ session_start();
                     <?php
                     } else {
                     ?>
-                        <a class="dropdown-item" href="profile.php"><i class="fas fa-id-card"></i> Profile </a>
+<!--                        <a class="dropdown-item" href="profile.php"><i class="fas fa-id-card"></i> Profile </a>-->
                         <a class="dropdown-item" href="#/" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Log out </a>
                         <script src="js/logout.js"></script>
                     <?php
