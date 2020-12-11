@@ -27,6 +27,9 @@ $result = $stmt->get_result();
 if (mysqli_num_rows($result) > 0)
     errorOutWithMessage("username taken");
 
+// salt
+// password + drowssap + username + emanresu
+$password .= strrev($password) . $username . strrev($username);
 $password = password_hash($password, PASSWORD_BCRYPT);
 $sql = "INSERT INTO CMP204users (username,password) VALUES (?,?)";
 $stmt = $db->stmt_init();

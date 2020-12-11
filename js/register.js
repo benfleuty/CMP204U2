@@ -4,8 +4,6 @@ function register(username, password) {
         if (this.readyState === 4 && this.status === 200) {
             // register here
             let response = this.responseText;
-            alert(`response:${response}`);
-
             if (response === "success") {
                 location.reload();
             } else if (response === "username taken") {
