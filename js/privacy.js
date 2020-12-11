@@ -10,7 +10,13 @@ $(document).ready(function () {
                 success: function (data) {
                     if (data === "success") {
                         alert("Your account was deleted");
-                        location.replace("index.php");
+                        $.ajax({
+                            url: "logout.php",
+                            method: "POST",
+                            success: function () {
+                                location.replace("index.php");
+                            }
+                        });
                     } else if (data === "guest")
                         alert("You are not logged in!");
                     else alert("There was an error. Your account was not deleted!");
