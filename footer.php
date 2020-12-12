@@ -27,16 +27,16 @@
                 <h5 class="text-uppercase">Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="privacy.php">Privacy Policy</a>
+                        <a href="req.html">Requirements Page</a>
                     </li>
                     <li>
-                        <a href="privacy.php">Privacy Policy</a>
+                        <a href="req.html">Requirements Page</a>
                     </li>
                     <li>
-                        <a href="privacy.php">Privacy Policy</a>
+                        <a href="req.html">Requirements Page</a>
                     </li>
                     <li>
-                        <a href="privacy.php">Privacy Policy</a>
+                        <a href="req.html">Requirements Page</a>
                     </li>
                 </ul>
             </div>

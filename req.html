@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Requirements page</title>
+    <link rel="stylesheet" href="reqStyle.css">
+</head>
+<body>
+
+<h1>CMP204 Requirements Page - Unit 2 Assessment</h1>
+
+<p>If you have not met a requirement, do not delete it from the table.</p>
+
+<table>
+    <tr>
+        <th class="reqCol">Requirement</th>
+        <th class="metCol">How did you meet this requirement?</th>
+        <th class="fileCol">File name(s), line no.</th>
+    </tr>
+    <tr>
+        <td>A clear use of HTML5</td>
+        <td>
+            I have used HTML throughout my website to build the website
+        </td>
+        <td>
+            All .html, .php in project root that have UI output
+        </td>
+    </tr>
+    <tr>
+        <td>Use of the Bootstrap framework providing a responsive layout</td>
+        <td>I have used the bootstrap framework to provide a responsive layout throughout the website</td>
+        <td>
+            All .html, .php in project root that have UI output
+        </td>
+    </tr>
+    <tr>
+        <td>Use of AJAX (pure JavaScript i.e. without the use of a library)</td>
+        <td>
+            I have used pure AJAX for the login and registration system. The user's input is sent to backend scripts
+            where it is verified.
+        </td>
+        <td>
+            login.php:*<br/>
+            register.php:*
+        </td>
+    </tr>
+    <tr>
+        <td>Use of the jQuery AJAX function</td>
+        <td>
+            I have used the jQuery AJAX function to create, read, update, and delete comments for a given target
+        </td>
+        <td>
+            logout.js:4<br/>
+            comments.js:49<br/>
+            comments.js:84<br/>
+            comments.js:118<br/>
+            privacy.js:7<br/>
+            privacy.js:14<br/>
+        </td>
+    </tr>
+    <tr>
+        <td>User login functionality (PHP/MySQL)</td>
+        <td>User information is verified via AJAX. Once verified, the user's information is stored in PHP sessions which allow the data to persist between pages for that browsing session</td>
+        <td>*.php</td>
+    </tr>
+    <tr>
+        <td>Ability to select, add, edit and delete information from a database (PHP/MySQL)</td>
+        <td>
+            The comments feature allows logged in users to leave comments. Once a user has posted a comment, they can edit it (this is alters the DB record and changes the content and posted time) or delete it.
+        </td>
+        <td>comments.php:*</td>
+    </tr>
+    <tr>
+        <td>Appropriate consideration of relevant laws</td>
+        <td>The privacy page clearly explains to the user what data is collected, why, and for how long. They are told how they can remove their information.</td>
+        <td>privacy.php</td>
+    </tr>
+    <tr>
+        <td>SQL queries should be written as prepared statements</td>
+        <td>
+            I have prepared all SQL statements and bound any necessary parameters.
+        </td>
+        <td>
+            register.php:36<br/>
+            register.php:43<br/>
+            comments.php:42<br/>
+            deleteAccount.php:19<br/>
+            deleteComment.php:13<br/>
+            editComment.php:13<br/>
+            editComment.php:31<br/>
+            login.php:20<br/>
+            postComment.php:20<br/>
+            postComment.php:32<br/>
+        </td>
+    </tr>
+    <tr>
+        <td>Passwords should be salted and hashed</td>
+        <td>Passwords are salted using the formula: password + password backwords + username + username backwards<br/>
+        PHP's BCRYPT is used to hash the passwords</td>
+        <td>
+            register.php:31-32<br/>
+            login.php:16
+        </td>
+    </tr>
+    <tr>
+        <td>Validation of user input</td>
+        <td>User input is run through mysqli_real_escape_string() and htmlspecialchars() which strip out or escape any characters that could be used for malicious purposes.</td>
+        <td>
+            real_escape_string():<br/>
+            register.php:13<br/>
+            register.php:15<br/>
+            editComment.php:15<br/>
+            editComment.php:18<br/>
+            login.php:12<br/>
+            login.php:13<br/>
+            postComment.php:14<br/><br/>
+
+            htmlspecialchars():<br/>
+            editComment.php:16<br/>
+            editComment.php:19<br/>
+            register.php:14<br/>
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+
+
