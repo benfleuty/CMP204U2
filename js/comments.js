@@ -15,7 +15,7 @@ class comment {
         <i id="delete-${this.id}" class="fa fa-trash" aria-hidden="true"></i></span></div></div></div>`;
     }
 
-    editor(text,id){
+    editor(text, id) {
         return `<div id="commentId-${id}" class="comment-outer">
         <div class="comment-body">
             <label for="commentText" content="Edit your comment:">
@@ -34,7 +34,7 @@ class comment {
 
 }
 
-function getClickedId(sender){
+function getClickedId(sender) {
     return sender.target.id.split('-')[1];
 }
 
@@ -80,7 +80,7 @@ $(document).ready(function () {
         $("#confirm-delete").modal();
     });
 
-    $(document).on("click","#deleteComment", function () {
+    $(document).on("click", "#deleteComment", function () {
         $.ajax({
             url: "deleteComment.php",
             method: "POST",
@@ -99,21 +99,21 @@ $(document).ready(function () {
 
     var editing = false;
 
-    $(document).on("click",".fa-edit",function (e){
-        if(editing){
+    $(document).on("click", ".fa-edit", function (e) {
+        if (editing) {
 
             return;
         }
         editing = true;
         commentID = getClickedId(e);
-        let search = "#commentId-"+commentID;
+        let search = "#commentId-" + commentID;
         let toChange = $(search);
         let toChangeText = $(search + " > div > ").html().trim();
         let temp = new comment();
-         $(toChange).replaceWith(temp.editor(toChangeText,commentID));
+        $(toChange).replaceWith(temp.editor(toChangeText, commentID));
     });
 
-    $(document).on("click","#postCommentEditButton",function (){
+    $(document).on("click", "#postCommentEditButton", function () {
         let textToEnter = $("#commentTextEditor").val();
         $.ajax({
             url: "editComment.php",
@@ -127,7 +127,7 @@ $(document).ready(function () {
                     textToEnter = data[3]
                     let Comment = new comment(textToEnter, username, commentID, datetime);
 
-                    let search = "#commentId-"+commentID;
+                    let search = "#commentId-" + commentID;
                     let toReplace = $(search);
                     $(toReplace).replaceWith(Comment.create());
                     return;

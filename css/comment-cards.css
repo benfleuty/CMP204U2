@@ -61,23 +61,23 @@
     text-align: right;
 }
 
-.comment-user-controls > i{
+.comment-user-controls > i {
     cursor: pointer;
     margin-left: 10px;
 }
 
-.fa-edit:hover{
-    color:blue;
+.fa-edit:hover {
+    color: blue;
 }
 
-.fa-trash:hover{
-    color:red;
+.fa-trash:hover {
+    color: red;
 }
 
 #noCommentsMessage > div, #commentNotLoggedInMessage > div {
     text-align: center;
 }
 
-#comments-output{
+#comments-output {
     margin-top: 5px;
 }
