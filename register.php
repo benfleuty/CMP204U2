@@ -40,9 +40,9 @@ $stmt->bind_param("ss", $username, $password);
 if ($stmt->execute()) {
     $stmt = $db->stmt_init();
     $sql = "SELECT * FROM CMP204users WHERE username = ? AND password = ?";
-    if(!$stmt = $db->prepare($sql)) errorOut();
+    if (!$stmt = $db->prepare($sql)) errorOut();
 
-    $stmt->bind_param("ss", $username,$password);
+    $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
     $result = $stmt->get_result(); // get the query result
     if (mysqli_num_rows($result) != 1) errorOut();
