@@ -13,5 +13,5 @@ if ($currentPage == "discography.php")
 if($currentPage == "privacy.php")
     echo '<link rel="stylesheet" href="css/privacy.css" />';
 
-else echo '<link rel="stylesheet" href="css/comment-cards.css" />;'
+else echo '<link rel="stylesheet" href="css/comment-cards.css" />';
 ?>
