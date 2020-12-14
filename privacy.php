@@ -23,7 +23,7 @@ $currentPage = "privacy.php";
 <main role="main" class="container">
     <h1>Privacy Policy</h1>
 
-    <h2><span style="underline">Data Collected:</span></h2>
+    <h2>Data Collected:</h2>
     <dl>
         <dt>Your username</dt>
         <dd><strong>Why:</strong> We store this to identify you. This allows you to log in and comment.</dd>
