@@ -35,6 +35,7 @@ $currentPage = "privacy.php";
     <p>We keep your data until you choose to delete it.</p>
 
     <h2>How can you delete your data?</h2>
+    <dl>
     <dt>Comments</dt>
     <dd><strong>To delete:</strong> You can delete your comments by locating them and using the delete function.
         <strong>You</strong> are responsible for what you comment - we do not recommending commenting information that
@@ -42,6 +43,8 @@ $currentPage = "privacy.php";
     </dd>
     <dt>Account</dt>
     <dd><strong>To delete:</strong> You can delete your account by clicking <span id="delete-account">here</span>.</dd>
+    </dl>
+
 
 
 </main> <?php include_once "footer.php" ?> </body>
