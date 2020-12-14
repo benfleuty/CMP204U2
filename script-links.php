@@ -11,7 +11,7 @@
         message: 'We only use essential cookies to give you the best experience! None of that ad tracking stuff.',
         delay: 600,
         expires: 1,
-        link: '#privacy',
+        link: 'privacy.php',
         onAccept: function(){
             var myPreferences = $.fn.ihavecookies.cookie();
             console.log('Yay! The following preferences were saved...');
