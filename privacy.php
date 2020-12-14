@@ -45,6 +45,8 @@ $currentPage = "privacy.php";
     <dd><strong>To delete:</strong> You can delete your account by clicking <span id="delete-account">here</span>.</dd>
     </dl>
 
+    <h2>Cookies:</h2>
+    <p>We only use essential cookies to improve your experience on this website. Without these cookies, you cannot use our website!</p>
 
 
 </main> <?php include_once "footer.php" ?> </body>
