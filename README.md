@@ -12,3 +12,5 @@
 * Placeholder images
     * [placehold.it](https://palceholder.com)
     
+Files containing sensitive information have been removed to make safe for turing the repo public
+
